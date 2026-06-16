@@ -219,5 +219,74 @@ Happy Birthday 🎂
 
 <script src="js/script.js"></script>
 
+<script>
+const unlockDate = new Date("2026-06-17T00:00:00+07:00");
+
+if (new Date() < unlockDate) {
+
+    document.body.innerHTML = `
+    <div style="
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        background:linear-gradient(135deg,#ffe6f2,#fff0f6);
+        font-family:Poppins,sans-serif;
+        text-align:center;
+        padding:20px;
+    ">
+        <div style="font-size:90px;">🎁🔒</div>
+
+        <h1 style="color:#ff4d8d;">
+            Kejutannya Belum Bisa Dibuka ❤️
+        </h1>
+
+        <p style="max-width:500px;color:#666;">
+            Tunggu sampai tepat pukul 00:00 WIB ya sayang...
+            Setelah itu semua kejutan akan terbuka ✨
+        </p>
+        
+        <p style="max-width:500px;color:#666;">
+          Maaf yah Sayaangggg Kalauuu aku Gak Bisa Rayainnya Pas Waktunya Ayyy,Soalnya Ayyy
+          Gak bisa Bergadang ayyy ,gara" semalam dah bergadang ayyykuuu
+        </p>
+
+        <div id="countdown"
+        style="
+            margin-top:20px;
+            font-size:30px;
+            font-weight:bold;
+            color:#ff4d8d;
+        ">
+        </div>
+    </div>
+    `;
+
+    function updateCountdown() {
+
+        const now = new Date();
+        const diff = unlockDate - now;
+
+        if(diff <= 0){
+            location.reload();
+            return;
+        }
+
+        const h = Math.floor(diff / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+        `${h} Jam ${m} Menit ${s} Detik`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown,1000);
+
+    throw new Error("Locked");
+}
+</script>
+
 </body>
 </html>
