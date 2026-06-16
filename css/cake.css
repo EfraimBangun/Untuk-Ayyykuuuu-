@@ -1,0 +1,759 @@
+/* =====================================
+   HAPPY BIRTHDAY AYYYKUUU ❤️
+   CAKE PAGE PREMIUM STYLE
+===================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --pink:#ff4f8b;
+    --pink2:#ff7aa8;
+    --pink3:#ffd6e7;
+    --white:#ffffff;
+    --shadow:0 15px 40px rgba(255,105,180,.20);
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(
+    -45deg,
+    #ffd6e7,
+    #ffeaf3,
+    #fff4f9,
+    #ffcfe2
+    );
+
+    background-size:400% 400%;
+
+    animation:bgMove 15s ease infinite;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    color:#555;
+}
+
+/* =======================
+   BACKGROUND
+======================= */
+
+@keyframes bgMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* =======================
+   CLOUDS
+======================= */
+
+.cloud{
+
+    position:fixed;
+
+    font-size:80px;
+
+    opacity:.5;
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+.c1{
+    top:5%;
+    animation:cloud1 30s linear infinite;
+}
+
+.c2{
+    top:20%;
+    animation:cloud2 45s linear infinite;
+}
+
+.c3{
+    top:45%;
+    animation:cloud3 60s linear infinite;
+}
+
+@keyframes cloud1{
+    from{left:-300px;}
+    to{left:120%;}
+}
+
+@keyframes cloud2{
+    from{left:-500px;}
+    to{left:120%;}
+}
+
+@keyframes cloud3{
+    from{left:-700px;}
+    to{left:120%;}
+}
+
+/* =======================
+   BALLOONS
+======================= */
+
+.balloon{
+
+    position:fixed;
+
+    font-size:70px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    animation:balloonFloat 15s linear infinite;
+}
+
+.b1{
+    left:10%;
+}
+
+.b2{
+    left:35%;
+    animation-delay:3s;
+}
+
+.b3{
+    left:65%;
+    animation-delay:6s;
+}
+
+.b4{
+    left:85%;
+    animation-delay:9s;
+}
+
+@keyframes balloonFloat{
+
+    from{
+        bottom:-150px;
+    }
+
+    to{
+        bottom:120%;
+    }
+
+}
+
+/* =======================
+   PETS
+======================= */
+
+.bear{
+
+    position:fixed;
+
+    bottom:15px;
+
+    left:15px;
+
+    font-size:70px;
+
+    z-index:20;
+
+    animation:bearMove 4s infinite;
+}
+
+.rabbit{
+
+    position:fixed;
+
+    bottom:15px;
+
+    right:15px;
+
+    font-size:70px;
+
+    z-index:20;
+
+    animation:rabbitMove 4s infinite;
+}
+
+.pet-chat{
+
+    position:fixed;
+
+    bottom:110px;
+
+    left:90px;
+
+    background:white;
+
+    padding:12px 20px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    z-index:20;
+
+    font-size:14px;
+}
+
+@keyframes bearMove{
+
+    50%{
+        transform:translateX(80px);
+    }
+
+}
+
+@keyframes rabbitMove{
+
+    50%{
+        transform:translateX(-80px);
+    }
+
+}
+
+/* =======================
+   MAIN CONTAINER
+======================= */
+
+.container{
+
+    position:relative;
+
+    z-index:10;
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:40px 20px;
+
+    text-align:center;
+}
+
+/* =======================
+   TITLES
+======================= */
+
+.title{
+
+    font-family:'Pacifico',cursive;
+
+    color:var(--pink);
+
+    font-size:60px;
+
+    margin-top:30px;
+
+    animation:floatTitle 3s ease infinite;
+}
+
+.name{
+
+    font-family:'Dancing Script',cursive;
+
+    color:var(--pink);
+
+    font-size:55px;
+
+    margin-top:10px;
+
+    text-shadow:
+    0 0 15px rgba(255,79,139,.4);
+}
+
+.subtitle{
+
+    margin-top:10px;
+
+    color:#666;
+
+    font-size:18px;
+}
+
+@keyframes floatTitle{
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+
+/* =======================
+   CAKE
+======================= */
+
+.cake-area{
+
+    margin-top:60px;
+
+    position:relative;
+
+    height:420px;
+}
+
+.cake{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    animation:cakeFloat 3s ease infinite;
+}
+
+@keyframes cakeFloat{
+
+    50%{
+        transform:
+        translateX(-50%)
+        translateY(-10px);
+    }
+
+}
+
+.age{
+
+    display:none;
+
+    position:absolute;
+
+    top:-180px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:95px;
+
+    font-weight:bold;
+
+    color:white;
+
+    z-index:999;
+
+    text-shadow:
+    0 0 15px #ff4f8b,
+    0 0 30px #ff4f8b,
+    0 0 50px #ff4f8b;
+
+}
+.age.show{
+
+    display:block;
+
+    animation:showAge 1s ease forwards;
+
+}
+
+@keyframes showAge{
+
+    0%{
+        opacity:0;
+        transform:
+        translateX(-50%)
+        scale(0);
+    }
+
+    70%{
+        opacity:1;
+        transform:
+        translateX(-50%)
+        scale(1.3);
+    }
+
+    100%{
+        opacity:1;
+        transform:
+        translateX(-50%)
+        scale(1);
+    }
+
+}
+.layer1{
+
+    width:320px;
+    height:110px;
+
+    background:#ff7eb3;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+}
+
+.layer2{
+
+    width:250px;
+    height:90px;
+
+    margin:auto;
+
+    background:#ff9ec7;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+}
+
+.layer3{
+
+    width:180px;
+    height:80px;
+
+    margin:auto;
+
+    background:#ffc6df;
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow);
+}
+
+/* =======================
+   CANDLES
+======================= */
+
+.candles{
+
+    position:absolute;
+
+    top:-70px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+
+    gap:12px;
+}
+
+.candle{
+
+    width:15px;
+
+    height:60px;
+
+    background:white;
+
+    border-radius:10px;
+
+    position:relative;
+}
+
+.flame{
+
+    position:absolute;
+
+    width:18px;
+
+    height:28px;
+
+    top:-25px;
+
+    left:-2px;
+
+    background:orange;
+
+    border-radius:50%;
+
+    animation:flicker .5s infinite alternate;
+
+    box-shadow:
+    0 0 20px orange,
+    0 0 40px yellow;
+}
+
+@keyframes flicker{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.2);
+    }
+
+}
+
+/* =======================
+   BOXES
+======================= */
+
+.wish-box,
+.message,
+.gift-box,
+.gift-message,
+.fortune-box,
+.love-box,
+.final-box{
+
+    background:
+    rgba(255,255,255,.85);
+
+    backdrop-filter:blur(10px);
+
+    margin-top:40px;
+
+    padding:30px;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+}
+
+.wish-box h2,
+.fortune-box h2,
+.love-box h2,
+.gift-message h2{
+
+    color:var(--pink);
+
+    margin-bottom:15px;
+}
+
+.message{
+
+    display:none;
+}
+
+.gift-box{
+
+    display:none;
+}
+
+.gift-message{
+
+    display:none;
+}
+
+.gift-icon{
+
+    font-size:90px;
+
+    margin-bottom:20px;
+}
+
+/* =======================
+   BUTTONS
+======================= */
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    background:var(--pink);
+
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.03);
+}
+
+/* =======================
+   COUNTDOWN
+======================= */
+
+#countdownBox{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.5);
+
+    z-index:9999;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+#countdownText{
+
+    color:white;
+
+    font-size:120px;
+}
+
+/* =======================
+   LOVE COUNT
+======================= */
+
+#loveCount{
+
+    margin-top:20px;
+
+    color:var(--pink);
+
+    font-size:50px;
+}
+
+#fortuneText{
+
+    margin-top:20px;
+
+    font-size:24px;
+
+    color:var(--pink);
+}
+
+/* =======================
+   MUSIC BUTTON
+======================= */
+
+#musicBtn{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    z-index:999;
+}
+
+/* =======================
+   HOME BUTTON
+======================= */
+
+.home-btn{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    background:#ff4f8b;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    box-shadow:
+    0 10px 30px rgba(255,79,139,.25);
+
+}
+
+.home-btn:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
+
+    background:#ff6b9f;
+
+}
+/* =======================
+   FLOATING EMOJI
+======================= */
+
+.floating{
+
+    position:fixed;
+
+    font-size:25px;
+
+    pointer-events:none;
+
+    animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+
+}
+
+/* =======================
+   MOBILE
+======================= */
+
+@media(max-width:768px){
+
+    .title{
+        font-size:40px;
+    }
+
+    .name{
+        font-size:40px;
+    }
+
+    .pet-chat{
+        display:none;
+    }
+
+    .layer1{
+        width:260px;
+    }
+
+    .layer2{
+        width:200px;
+    }
+
+    .layer3{
+        width:140px;
+    }
+
+    .age{
+        font-size:55px;
+    }
+
+}
